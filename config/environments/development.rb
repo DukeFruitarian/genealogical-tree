@@ -27,4 +27,7 @@ GenealogicalTree::Application.configure do
 
   # Devise require it
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Handling unpermitted assignments to raise an exception
+  config.action_controller.action_on_unpermitted_parameters = :raise
 end
