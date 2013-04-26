@@ -2,7 +2,14 @@ GenealogicalTree::Application.routes.draw do
   devise_for :users, path: 'authentication', controller: 'sessions',path_names: {sign_up: 'sign'}
   resources :products
 
-  get ''
+  devise_scope :user do
+    get '/sign_in' => 'sessions#new', as: :new_user_session
+    post '/sign_in' => 'sessions#create', as: :user_session
+    get '/sign_out' => 'sessions#destroy', as: :destroy_user_session
+
+    get '/sign_up' => 'registrations#new', as: :new_user_registration
+    post '/sign_up' => 'registrations#create', as: :user_registration
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
