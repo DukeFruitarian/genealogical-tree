@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   def create
-    binding.pry
+    params[:user] = params.require(:user).permit(:email, :password, :password_confirmation)
+    super
   end
 end

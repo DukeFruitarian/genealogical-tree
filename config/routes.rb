@@ -1,5 +1,5 @@
 GenealogicalTree::Application.routes.draw do
-  devise_for :users, path: 'authentication', controller: 'sessions',path_names: {sign_up: 'sign'}
+  devise_for :users
   resources :products
 
   devise_scope :user do
