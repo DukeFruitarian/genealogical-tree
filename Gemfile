@@ -28,7 +28,7 @@ gem 'jquery-rails'
 
 gem 'turbolinks'
 
-gem 'devise'
+gem 'devise', github: 'idl3/devise', branch: 'rails4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 

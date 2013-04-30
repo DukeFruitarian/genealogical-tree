@@ -50,6 +50,9 @@
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
+              <li>
+                <%= logged_in? ? render('layouts/logged_in_greeting') : link_to('login', new_user_session_path) %>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
