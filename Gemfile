@@ -32,7 +32,6 @@ gem 'devise', github: 'idl3/devise', branch: 'rails4'
 
 gem 'jbuilder', '~> 1.0.1'
 
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
